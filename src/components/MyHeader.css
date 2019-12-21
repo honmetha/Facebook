@@ -1,0 +1,27 @@
+.navBarBGColor {
+  background-color: #4267B2;
+}
+
+.fbLogo {
+  margin: 1.5%;
+}
+
+.searchBar {
+  width: 70%;
+  margin: 1.5% 1.5% 1.5% 0%;
+}
+
+.navProfilePic {
+  border-radius: 50%;
+  margin-right: 12%;
+}
+
+.profilePicButton {
+  padding-left: 0px;
+  margin: 1.5% 0% 1.5% 0%;
+}
+
+.navTextButton {
+  padding-right: 1%;
+  margin: 1.5% 0% 1.5% 0%;
+}
