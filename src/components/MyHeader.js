@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './MyHeader.css'
-import { Row, Col, Input, Button, Divider } from 'antd'
+import { Row, Col, Input, Button } from 'antd'
 
 const { Search } = Input;
 

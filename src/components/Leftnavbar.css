@@ -1,0 +1,10 @@
+.ProfilePic {
+  border-radius: 50%;
+  margin-left: -10%;
+  margin-right: 7%;
+}
+
+.profileButton {
+  padding-right: 50%;
+  border: none;
+}
