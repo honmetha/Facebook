@@ -8,7 +8,7 @@ const { Search } = Input;
 export default class MyHeader extends Component {
   render() {
     return (
-      <Row className="navBarBGColor">
+      <Row className="fbNavBar">
         <Col span={12}>
           <Row type="flex" justify="end">
             <img src="fblogo.png" alt="Facebook" width="30px" className="fbLogo" />

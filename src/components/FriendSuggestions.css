@@ -1,0 +1,54 @@
+.friSuggestionCard {
+  width: 320px;
+  margin: 0% 0% 2% 0%;
+  border-radius: 4px;
+  border: 1px solid #DEDFE2;
+}
+
+.friSuggestionHeader {
+  margin: 2% 3%;
+}
+
+.peopleYouMayKnow {
+  color: black;
+  font-weight: 450;
+}
+
+.seeAll {
+  color: #385999;
+  font-weight: 450;
+}
+
+.friendList {
+  margin: 3.5%;
+}
+
+.friendsPic {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 79px;
+}
+
+.friendTextAndButtons {
+  padding-left: 1.5%;
+}
+
+.friendTitle {
+  color: #385999;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.mutualFriends {
+  color: #808080;
+  font-size: 110%;
+}
+
+.addRemoveButtons {
+  margin: 2% 2% 0 0;
+  background-color: #F5F6F7;
+}
+
+.addRemoveButtons:hover {
+  background-color: #F5F6F7;
+}
