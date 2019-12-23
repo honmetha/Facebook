@@ -1,0 +1,73 @@
+.ant-card-body {
+  padding: 0%;
+}
+
+.postCard {
+  margin: 2%;
+  border-radius: 5px;
+  border: 1px solid #DEDFE2;
+}
+
+.cardHeader {
+  margin: 2%;
+}
+
+.postProfilePic {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 40px;
+}
+
+.profileText {
+  margin-left: 1.5%;
+}
+
+.profileName {
+  color: #385999;
+}
+
+.descriptionPart {
+  margin: 0% 2.5% 1.5% 2.5%;
+  color: black;
+}
+
+.peopleEmoji {
+  margin: 2% 2.5%;
+}
+
+.emojiButtonDivider {
+  margin: 0%;
+}
+
+.actionButtons {
+  font-weight: 550;
+  border: none;
+  width: 100%;
+  color: #606770;
+  height: 45px;
+}
+
+.actionButtons:hover {
+  background-color: #F2F2F2;
+  color: #606770;
+}
+
+.buttonCommentDivider {
+  margin: 0%;
+}
+
+.commentProfilePic {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 32px;
+  /* margin-bottom: 0; */
+}
+
+.commentInput {
+  margin: 1.5% 2%;
+}
+
+.commentInputBar {
+  border-radius: 50px;
+  background-color: #F2F3F5;
+}

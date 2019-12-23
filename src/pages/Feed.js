@@ -21,10 +21,10 @@ export default class Feed extends Component {
                 </Col>
               </Row>
             </Col>
-            <Col span={8}>
+            <Col span={9}>
               <Post />
             </Col>
-            <Col span={9}>
+            <Col span={8}>
               <Row type="flex" justify="start">
                 <Col>
                   <FriendSuggestions />
