@@ -1,10 +1,28 @@
-.ProfilePic {
-  border-radius: 50%;
-  margin-left: -10%;
-  margin-right: 7%;
+.Leftnavbar {
+  background-color: #EAEBEE;
+  width: 200px;
+  border: none;
+  margin-top: 1%;
 }
 
-.profileButton {
-  padding-right: 50%;
-  border: none;
+.leftSideProfile {
+  margin-bottom: 8%;
+}
+
+.ProfilePic {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 25px;
+}
+
+.marginBottom-3 {
+  margin-bottom: 3%;
+}
+
+.marginTop-10 {
+  margin-top: -10%;
+}
+
+.blackColor {
+  color: black;
 }

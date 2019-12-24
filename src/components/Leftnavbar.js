@@ -1,20 +1,70 @@
 import React, { Component } from 'react'
-import { Row, Col, Button } from 'antd'
+import { Row, Col, Card } from 'antd'
 import './Leftnavbar.css'
 
 export default class Leftnavbar extends Component {
   render() {
     return (
-      <Row>
-        <Col>
-          <Row>
-          <Button type="default" block className="profileButton">
-            <img src="honmetha.jpg" width="25px" alt="Hon Metha" className="ProfilePic" />
-            Hon Metha
-          </Button>
-          </Row>
-        </Col>
-      </Row>
+      <Card className="Leftnavbar">
+        <Row className="leftSideProfile">
+          <a href="http://localhost:3000/feed">
+            <Col span={4}>
+              <img src="honmetha.jpg" alt="" width="25px" className="ProfilePic marginTop-10" />
+            </Col>
+            <Col span={14}>
+              <span className="blackColor">Hon Metha</span>
+            </Col>
+            <Col span={6}>
+              <Row type="flex" justify="end">
+              </Row>
+            </Col>
+          </a>
+        </Row>
+        <Row className="marginBottom-3">
+          <a href="http://localhost:3000/feed">
+            <Col span={4}>
+              <img src="NewsFeed.png" alt="" width="25px" className="marginTop-10" />
+            </Col>
+            <Col span={14}>
+              <span className="blackColor">News feed</span>
+            </Col>
+            <Col span={6}>
+              <Row type="flex" justify="end">
+              </Row>
+            </Col>
+          </a>
+        </Row>
+        <Row className="marginBottom-3">
+          <a href="http://localhost:3000/feed">
+            <Col span={4}>
+              <img src="Messenger.png" alt="" width="25px" className="marginTop-10" />
+            </Col>
+            <Col span={20}>
+              <span className="blackColor">Messenger</span>
+            </Col>
+          </a>
+        </Row>
+        <Row className="marginBottom-3">
+          <a href="http://localhost:3000/feed">
+            <Col span={4}>
+              <img src="Watch.png" alt="" width="25px" className="marginTop-10" />
+            </Col>
+            <Col span={20}>
+              <span className="blackColor">Watch</span>
+            </Col>
+          </a>
+        </Row>
+        <Row className="marginBottom-3">
+          <a href="http://localhost:3000/feed">
+            <Col span={4}>
+              <img src="Marketplace.png" alt="" width="25px" className="marginTop-10" />
+            </Col>
+            <Col span={20}>
+              <span className="blackColor">Marketplace</span>
+            </Col>
+          </a>
+        </Row>
+      </Card>
     )
   }
 }
