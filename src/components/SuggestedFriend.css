@@ -1,0 +1,33 @@
+.friendList {
+  margin: 3.5%;
+}
+
+.friendsPic {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 79px;
+}
+
+.friendTextAndButtons {
+  padding-left: 1.5%;
+}
+
+.friendTitle {
+  color: #385999;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.mutualFriends {
+  color: #808080;
+  font-size: 110%;
+}
+
+.addRemoveButtons {
+  margin: 2% 2% 0 0;
+  background-color: #F5F6F7;
+}
+
+.addRemoveButtons:hover {
+  background-color: #F5F6F7;
+}

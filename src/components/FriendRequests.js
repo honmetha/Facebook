@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { Row, Col, Card } from 'antd'
-import './FriendSuggestions.css'
-import SuggestedFriend from './SuggestedFriend'
+import './FriendRequests.css'
+import RequestedFriend from './RequestedFriend'
 
-export default class FriendSuggestions extends Component {
+export default class FriendRequests extends Component {
   render() {
     return (
       <div>
-        <Card className="friSuggestionCard">
-          <Row className="friSuggestionHeader">
+        <Card className="friRequestCard">
+          <Row className="friRequestHeader">
             <Col span={20}>
-              <span className="peopleYouMayKnow">People You May Know</span>
+              <span className="friendRequests">Friend Requests</span>
             </Col>
             <Col span={4}>
               <Row type="flex" justify="end">
@@ -20,9 +20,9 @@ export default class FriendSuggestions extends Component {
               </Row>
             </Col>
           </Row>
-          <SuggestedFriend />
-          <SuggestedFriend />
-          <SuggestedFriend />
+          <RequestedFriend />
+          <RequestedFriend />
+          <RequestedFriend />
         </Card>
       </div>
     )

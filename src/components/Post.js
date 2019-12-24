@@ -26,12 +26,12 @@ export default class Post extends Component {
             </Row>
             <Row>
               <Col className="descriptionPart">
-                <span>Hello World</span>
+                <span>Don't be jealous at me. This is not my house.</span>
               </Col>
             </Row>
             <Row>
               <Col span={24}>
-                <img src="https://images.unsplash.com/photo-1486673748761-a8d18475c757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" 
+                <img src="https://images.unsplash.com/photo-1568379326819-49e9b9ef54bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" 
                 alt="" 
                 width="100%" 
                 />
