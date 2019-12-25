@@ -1,0 +1,32 @@
+.languageCard {
+  width: 320px;
+  margin: 0% 0% 2% 0%;
+  border-radius: 4px;
+  border: 1px solid #DEDFE2;
+}
+
+.addLanguages {
+  margin: 3% 3.5%;
+}
+
+.languageLineHeight {
+  line-height: 140%;
+}
+
+.currentLanguageAndDots {
+  color: #90949C;
+}
+
+.otherLanguagesLink {
+  color: #385898;
+}
+
+.addLanguageButton {
+  border-radius: 2px;
+  background-color: #F5F6F7;
+  padding: 0px 11px 0px 11px;
+}
+
+.addLanguageButton:hover {
+  background-color: #ECEDF0;
+}

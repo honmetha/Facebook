@@ -18,14 +18,29 @@ export default class MyHeader extends Component {
         <Col span={12}>
           <Row type="flex" justify="center">
             <Button type="link" ghost className="profilePicButton">
-              <img src="honmetha.jpg" alt="Hon Metha" width="30px" className="navProfilePic" />
+              <img src="honmetha.jpg" alt="" width="30px" className="navProfilePic" />
               <strong className="navProfileText">Hon</strong>
             </Button>
             <Button type="link" ghost className="navTextButton">
               <strong>Home</strong>
             </Button>
-            <Button type="link" ghost className="navTextButton">
+            <Button type="link" ghost className="navTextButton textIconButtonMargin">
               <strong>Create</strong>
+            </Button>
+            <Button type="link" ghost className="navIconButton">
+              <img src="FriendRequests.png" alt="" width="30px" />
+            </Button>
+            <Button type="link" ghost className="navIconButton">
+              <img src="Messages.png" alt="" width="30px" />
+            </Button>
+            <Button type="link" ghost className="navIconButton">
+              <img src="Notifications.png" alt="" width="30px" />
+            </Button>
+            <Button type="link" ghost className="navIconButton">
+              <img src="QuickHelp.png" alt="" width="30px" />
+            </Button>
+            <Button type="link" ghost className="navIconButton">
+              <img src="DropDown.png" alt="" width="30px" />
             </Button>
           </Row>
         </Col>

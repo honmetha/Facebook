@@ -4,6 +4,8 @@ import Leftnavbar from '../components/Leftnavbar'
 import Post from '../components/Post'
 import FriendSuggestions from '../components/FriendSuggestions'
 import FriendRequests from '../components/FriendRequests'
+import LanguageCard from '../components/LanguageCard'
+import PrivacyTerms from '../components/PrivacyTerms'
 import { Row, Col } from 'antd'
 
 export default class Feed extends Component {
@@ -32,6 +34,8 @@ export default class Feed extends Component {
                 <Col>
                   <FriendRequests />
                   <FriendSuggestions />
+                  <LanguageCard />
+                  <PrivacyTerms />
                 </Col>
               </Row>
             </Col>
