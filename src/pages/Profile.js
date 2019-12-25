@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import MyHeader from '../components/MyHeader'
+import ProfileMenu from '../components/ProfileMenu'
 import Post from '../components/Post'
 import LanguageCard from '../components/LanguageCard'
 import PrivacyTerms from '../components/PrivacyTerms'
@@ -12,11 +13,10 @@ export default class Profile extends Component {
         <MyHeader />
         <Row>
           <Col span={4}>
-            1
           </Col>
-          <Col span={14}>
+          <Col span={15}>
             <Row>
-              ABC
+              <ProfileMenu />
             </Row>
             <Row>
               <Col span={9}>
@@ -32,8 +32,7 @@ export default class Profile extends Component {
               </Col>
             </Row>
           </Col>
-          <Col span={6}>
-            3
+          <Col span={5}>
           </Col>
         </Row>
       </div>

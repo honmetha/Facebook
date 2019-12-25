@@ -1,0 +1,20 @@
+.profileMenuBar {
+  width: 861px;
+  width: 100%;
+  max-width: 861px;
+  margin: -1.2% 0% 1.2% -0.4%;
+  border-top: none;
+}
+
+.profileMenuBottons {
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.profileMenuBottonsText {
+  color: #385999;
+  margin-top: 15px;
+}
