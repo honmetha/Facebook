@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './MyHeader.css'
 import { Row, Col, Input, Button } from 'antd'
+import { Link } from 'react-router-dom'
 
 const { Search } = Input;
 
@@ -22,7 +23,9 @@ export default class MyHeader extends Component {
               <strong className="navProfileText">Hon</strong>
             </Button>
             <Button type="link" ghost className="navTextButton">
+              <Link to="/feed">
               <strong>Home</strong>
+              </Link>
             </Button>
             <Button type="link" ghost className="navTextButton textIconButtonMargin">
               <strong>Create</strong>
