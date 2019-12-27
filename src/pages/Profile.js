@@ -5,6 +5,8 @@ import Post from '../components/Post'
 import LanguageCard from '../components/LanguageCard'
 import PrivacyTerms from '../components/PrivacyTerms'
 import { Row, Col } from 'antd'
+import CreatePost from '../components/CreatePost'
+import './Pages.css'
 
 export default class Profile extends Component {
   render() {
@@ -27,6 +29,8 @@ export default class Profile extends Component {
               </Col>
               <Col span={15}>
                 <Row type="flex" justify="start">
+                  <CreatePost />
+                  <Post />
                   <Post />
                 </Row>
               </Col>

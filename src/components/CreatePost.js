@@ -1,33 +1,43 @@
 import React, { Component } from 'react'
 import './CreatePost.css'
-import { Card, Row, Col, Button, Divider } from 'antd'
+import { Card, Row, Col, Button, Divider, Input } from 'antd'
 
 export default class CreatePost extends Component {
   render() {
     return (
       <Card className="CreatePostCard">
-        <Row className="CreatePostInside">
+        <Row className="createPostTitle">
+          <span>Create Post</span>
+        </Row>
+        <Divider className="createPostDivider" />
+        <Row className="whatsOnYourMind">
           <Col>
-            <Row>Create Post</Row>
-            <Divider />
-            <Row>
-              <Col span={6}>
-                2
+            <Row className="whatsOnYourMindInput">
+              <Col span={3}>
+                <img src="honmetha.jpg" alt="" width="45px" className="whatsOnYourMindPic" />
               </Col>
-              <Col span={18}>
-                What's on your mind, Hon?
+              <Col span={21}>
+                <Input placeholder="What's on your mind, Hon?" className="whatsOnYourMindInputText" />
               </Col>
             </Row>
-            <Divider />
-            <Row>
-              <Button>Photo/Video</Button>
-              <Button>Tag Friends</Button>
-              <Button>Feeling/Activity</Button>
-              <Button>...</Button>
+            <Divider className="whatsOnYourMindDivider" />
+            <Row className="whatsOnYourMindButtons">
+              <Button className="createPostButtons">
+                <img src="createPostPhoto.png" alt="" width="25" />
+                Photo/Video
+              </Button>
+              <Button className="createPostButtons">
+                <img src="createPostTag.png" alt="" width="25" />
+                Tag Friends
+              </Button>
+              <Button className="createPostButtons">
+                <img src="createPostFeeling.png" alt="" width="25" />
+                Feeling/Activity
+              </Button>
+              <Button className="createPostButtons">...</Button>
             </Row>
           </Col>
         </Row>
-        
       </Card>
     )
   }
