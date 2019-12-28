@@ -12,7 +12,9 @@ export default class MyHeader extends Component {
       <Row className="fbNavBar">
         <Col span={12}>
           <Row type="flex" justify="end">
-            <img src="fblogo.png" alt="Facebook" width="30px" className="fbLogo" />
+            <Link to="/feed" className="fbLogo">
+              <img src="fblogo.png" alt="" width="31.7px" />
+            </Link>
             <Search placeholder="Search" enterButton className="searchBar" />
           </Row>
         </Col>

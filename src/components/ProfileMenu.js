@@ -7,7 +7,16 @@ export default class ProfileMenu extends Component {
     return (
       <Row type="flex" justify="center">
         <Card className="profileMenuBar">
-          <img src="facebookCover.jpg" alt="" width="100%" />
+          <div class="container">
+            <img src="facebookCover.jpg" alt="" width="100%" />
+            <div class="bottom-left">
+              <img src="honmetha.jpg" alt="" className="mainProfilePic" width="100%" />
+            </div>
+            <div class="bottom-right">Bottom Right</div>
+            <div class="centered">
+              <span className="mainProfileName">Hon Metha</span>
+            </div>
+          </div>
           <Row>
             <Col span={6}></Col>
             <Col span={16}>

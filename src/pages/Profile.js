@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import MyHeader from '../components/MyHeader'
 import ProfileMenu from '../components/ProfileMenu'
+import CreatePost from '../components/CreatePost'
 import Post from '../components/Post'
 import LanguageCard from '../components/LanguageCard'
 import PrivacyTerms from '../components/PrivacyTerms'
 import { Row, Col } from 'antd'
-import CreatePost from '../components/CreatePost'
 import './Pages.css'
 
 export default class Profile extends Component {

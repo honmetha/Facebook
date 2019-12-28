@@ -1,3 +1,41 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: -28px;
+  left: 18px;
+}
+
+.mainProfilePic {
+  width: 100%;
+  max-width: 175px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #DEDFE2;
+}
+
+.centered {
+  position: absolute;
+  bottom: -8px;
+  left: 31.5%;
+  transform: translate(-50%, -50%);
+}
+
+.mainProfileName {
+  font-size: 170%;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
 .profileMenuBar {
   width: 861px;
   width: 100%;
@@ -16,5 +54,4 @@
 
 .profileMenuBottonsText {
   color: #385999;
-  margin-top: 15px;
 }
