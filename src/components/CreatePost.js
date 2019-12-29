@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import './CreatePost.css'
-import { Card, Row, Col, Button, Divider, Input } from 'antd'
+import { Card, Row, Col, Button, Divider, Input, Form } from 'antd'
 
-export default class CreatePost extends Component {
+class CreatePost extends Component {
+
+  state = {
+    postText: '',
+    imgUrl: '',
+  }
+
   render() {
+    let { onChangePostText, onChangeImgUrl } = this.props
     return (
       <Card className="CreatePostCard">
         <Row className="createPostTitle">
@@ -17,7 +24,25 @@ export default class CreatePost extends Component {
                 <img src="honmetha.jpg" alt="" width="45px" className="whatsOnYourMindPic" />
               </Col>
               <Col span={21}>
-                <Input placeholder="What's on your mind, Hon?" className="whatsOnYourMindInputText" />
+                <Form onSubmit={this.props.onAddPost}>
+                  <Form.Item>
+                    <Input placeholder="What's on your mind, Hon?"
+                      className="whatsOnYourMindInputText"
+                      onChange={onChangePostText}
+                    />
+                  </Form.Item>
+                  <Form.Item>
+                    <Input placeholder="Image URL what you want"
+                      className="ImageUrlWhatYouWant"
+                      onChange={(e) => onChangeImgUrl(e)}
+                    />
+                  </Form.Item>
+                  <Form.Item>
+                    <Button type="primary" htmlType="submit">
+                      Submit
+                    </Button>
+                  </Form.Item>
+                </Form>
               </Col>
             </Row>
             <Divider className="whatsOnYourMindDivider" />
@@ -42,3 +67,5 @@ export default class CreatePost extends Component {
     )
   }
 }
+
+export default Form.create()(CreatePost)
