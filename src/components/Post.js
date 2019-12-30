@@ -15,7 +15,8 @@ export default class Post extends Component {
               <strong>Hon Metha</strong>
             </Row>
             <Row>
-              Just now ·
+              <span>Just now · </span>
+              <img src="publicShared.png" alt="" width="13px" />
             </Row>
           </Col>
           <Col span={1}>
