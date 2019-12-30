@@ -4,11 +4,6 @@ import { Card, Row, Col, Button, Divider, Input, Form } from 'antd'
 
 class CreatePost extends Component {
 
-  state = {
-    postText: '',
-    imgUrl: '',
-  }
-
   render() {
     let { onChangePostText, onChangeImgUrl } = this.props
     return (

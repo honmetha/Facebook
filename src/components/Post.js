@@ -15,7 +15,7 @@ export default class Post extends Component {
               <strong>Hon Metha</strong>
             </Row>
             <Row>
-              3 hrs ·
+              Just now ·
             </Row>
           </Col>
           <Col span={1}>

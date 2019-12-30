@@ -36,7 +36,7 @@ export default class Feed extends Component {
   handleAddPost = (e) => {
     e.preventDefault();
     const { postText, imgUrl, posts } = this.state
-    this.setState({ posts: [...posts, { text: postText, imgUrl: imgUrl }] })
+    this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...posts] })
   }
 
   render() {
