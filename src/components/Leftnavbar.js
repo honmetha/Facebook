@@ -27,7 +27,7 @@ export default class Leftnavbar extends Component {
               <img src="NewsFeed.png" alt="" width="25px" className="marginTop-10" />
             </Col>
             <Col span={14}>
-              <span className="blackColor">News feed</span>
+              <span className="blackColor newsFeedText">News feed</span>
             </Col>
             <Col span={6}>
               <Row type="flex" justify="end">

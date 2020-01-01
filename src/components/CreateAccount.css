@@ -1,0 +1,25 @@
+.createAccount {
+  background-image: linear-gradient(#FFFFFF, #D3D9E8);
+}
+
+.fbLoginText {
+  color: #0e385f;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 40px;
+  /* line-height: 20px; */
+  width: 470px;
+}
+
+.createAccountHeader {
+  color: #333;
+  font-size: 38px;
+  font-weight: 620;
+  padding-top: 20px;
+}
+
+.createAccountText {
+  color: #1d2129;
+  font-size: 21px;
+  padding-bottom: 20px;
+}

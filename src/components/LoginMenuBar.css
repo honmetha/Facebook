@@ -1,0 +1,28 @@
+.fbLoginMenuBar {
+  background-color: #4267B2;
+}
+
+.loginMenuBar {
+  padding-top: 15px;
+}
+
+.loginInput {
+  width: 160px;
+  height: 25px;
+  border-color: #1d2a5b;
+  border-radius: 0%;
+}
+
+.loginInputButton {
+  height: 25px;
+  color: white;
+  font-weight: 550;
+  background-color: #4267b2;
+  border-color: #29487d;
+  border-radius: 2px;
+  padding: 0px 8px;
+}
+
+.whiteFontColor {
+  color: white;
+}
