@@ -23,3 +23,27 @@
   font-size: 21px;
   padding-bottom: 20px;
 }
+
+.createAccountInput {
+  height: 40px;
+  border-radius: 5px;
+  border-color: #bdc7d8;
+  margin-bottom: 11px;
+}
+
+.createAccountInput::placeholder {
+  font-size: 18px;
+  color: #999999;
+}
+
+.createAccountBirthdayGender {
+  color: #90949c;
+  font-size: 16.5px;
+  font-weight: bold;
+}
+
+.createAccountGenderRadio {
+  color: #1d2129;
+  font-size: 18px;
+  font-weight: normal;
+}

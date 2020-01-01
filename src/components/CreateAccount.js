@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import './CreateAccount.css'
-import { Row, Col, Input, Button } from 'antd'
+import { Row, Col, Input, Button, Radio } from 'antd'
 import Axios from 'axios'
 
 export default class CreateAccount extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       firstName: "",
       lastName: "",
       userName: "",
       password: "",
       imageUrl: ""
-     };
+    };
   }
 
   handleSignUp = (e) => {
@@ -25,9 +25,9 @@ export default class CreateAccount extends Component {
     }).then(result => {
       console.log(result.data)
     })
-    .catch(err => {
-      console.error(err)
-    })
+      .catch(err => {
+        console.error(err)
+      })
   }
 
   render() {
@@ -54,37 +54,63 @@ export default class CreateAccount extends Component {
               <Row>
                 <Col span="12">
                   <Input onChange={e =>
-                  this.setState({ firstName: e.target.value })
+                    this.setState({ firstName: e.target.value })
                   }
-                  placeholder="First Name" />
+                    placeholder="First Name"
+                    className="createAccountInput" />
                 </Col>
                 <Col span="12">
                   <Input onChange={e =>
-                  this.setState({ lastName: e.target.value })
+                    this.setState({ lastName: e.target.value })
                   }
-                  placeholder="Last Name" />
+                    placeholder="Surname"
+                    className="createAccountInput" />
                 </Col>
-              </Row>
-              <Row>
-                <Input onChange={e =>
-                  this.setState({ userName: e.target.value })
-                  }
-                  placeholder="Username" />
-              </Row>
-              <Row>
-                <Input onChange={e =>
-                  this.setState({ password: e.target.value })
-                  }
-                  placeholder="Password" />
               </Row>
               <Row>
                 <Input onChange={e =>
                   this.setState({ imageUrl: e.target.value })
-                  }
-                  placeholder="Image Url" />
+                }
+                  placeholder="Image Url"
+                  className="createAccountInput" />
+              </Row>
+              <Row>
+                <Input onChange={e =>
+                  this.setState({ userName: e.target.value })
+                }
+                  placeholder="Mobile number or email address"
+                  className="createAccountInput" />
+              </Row>
+              <Row>
+                <Input.Password onChange={e =>
+                  this.setState({ password: e.target.value })
+                }
+                  placeholder="New password"
+                  className="createAccountInput" />
+              </Row>
+              <Row className="createAccountBirthdayGender">
+                <span>Birthday</span>
+              </Row>
+              <Row className="createAccountBirthdayGender">
+                <span>Gender</span>
+              </Row>
+              <Row>
+                <Radio.Group>
+                  <Radio value={1} className="createAccountGenderRadio">Female</Radio>
+                  <Radio value={2} className="createAccountGenderRadio">Male</Radio>
+                  <Radio value={3} className="createAccountGenderRadio">Custom</Radio>
+                </Radio.Group>
+              </Row>
+              <Row>
+                <span>
+                  By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.
+                </span>
               </Row>
               <Row>
                 <Button onClick={this.handleSignUp} type="primary">Sign Up</Button>
+              </Row>
+              <Row>
+                <span>Create a Page for a celebrity, band or business.</span>
               </Row>
             </Col>
           </Row>
