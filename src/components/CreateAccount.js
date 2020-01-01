@@ -1,8 +1,35 @@
 import React, { Component } from 'react'
 import './CreateAccount.css'
-import { Row, Col, Input } from 'antd'
+import { Row, Col, Input, Button } from 'antd'
+import Axios from 'axios'
 
 export default class CreateAccount extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      firstName: "",
+      lastName: "",
+      userName: "",
+      password: "",
+      imageUrl: ""
+     };
+  }
+
+  handleSignUp = (e) => {
+    Axios.post("http://localhost:8080/createUser", {
+      username: this.state.userName,
+      password: this.state.lastName,
+      firstname: this.state.userName,
+      lastname: this.state.password,
+      profilepic: this.state.imageUrl
+    }).then(result => {
+      console.log(result.data)
+    })
+    .catch(err => {
+      console.error(err)
+    })
+  }
+
   render() {
     return (
       <Row className="createAccount">
@@ -26,11 +53,38 @@ export default class CreateAccount extends Component {
               </Row>
               <Row>
                 <Col span="12">
-                  <Input placeholder="First Name" />
+                  <Input onChange={e =>
+                  this.setState({ firstName: e.target.value })
+                  }
+                  placeholder="First Name" />
                 </Col>
                 <Col span="12">
-                  <Input placeholder="Last Name" />
+                  <Input onChange={e =>
+                  this.setState({ lastName: e.target.value })
+                  }
+                  placeholder="Last Name" />
                 </Col>
+              </Row>
+              <Row>
+                <Input onChange={e =>
+                  this.setState({ userName: e.target.value })
+                  }
+                  placeholder="Username" />
+              </Row>
+              <Row>
+                <Input onChange={e =>
+                  this.setState({ password: e.target.value })
+                  }
+                  placeholder="Password" />
+              </Row>
+              <Row>
+                <Input onChange={e =>
+                  this.setState({ imageUrl: e.target.value })
+                  }
+                  placeholder="Image Url" />
+              </Row>
+              <Row>
+                <Button onClick={this.handleSignUp} type="primary">Sign Up</Button>
               </Row>
             </Col>
           </Row>
