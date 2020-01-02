@@ -1,16 +1,53 @@
 .fbLoginMenuBar {
   background-color: #4267B2;
+  padding-bottom: 4px;
 }
 
 .loginMenuBar {
   padding-top: 15px;
 }
 
+.fbTextLogo {
+  margin-top: 17px;
+}
+
+.usernamePasswordText {
+  color: white;
+  font-size: 13px;
+  padding: 0px 0px 4px 1px;
+}
+
 .loginInput {
-  width: 160px;
+  width: 100%;
+  max-width: 160px;
   height: 25px;
-  border-color: #1d2a5b;
   border-radius: 0%;
+  border: 1px solid #ccd0d5;
+  border-color: #1d2a5b;
+  padding: 3px 3px 4px;
+}
+
+.loginInput:focus {
+  outline-width: 0px;
+}
+
+.forgottenAccount {
+  padding: 1px 0px 0px 1px;
+}
+
+.forgottenAccountText {
+  font-size: 13px;
+  color: #9cb4d8;
+  font-weight: normal;
+}
+
+.forgottenAccountText:hover {
+  text-decoration: underline;
+  color: #9cb4d8;
+}
+
+.loginInputButtonRow{
+  padding-top: 23px;
 }
 
 .loginInputButton {
@@ -21,8 +58,4 @@
   border-color: #29487d;
   border-radius: 2px;
   padding: 0px 8px;
-}
-
-.whiteFontColor {
-  color: white;
 }
