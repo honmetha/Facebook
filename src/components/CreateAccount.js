@@ -18,9 +18,9 @@ export default class CreateAccount extends Component {
   handleSignUp = (e) => {
     Axios.post("http://localhost:8080/createUser", {
       username: this.state.userName,
-      password: this.state.lastName,
-      firstname: this.state.userName,
-      lastname: this.state.password,
+      password: this.state.password,
+      firstname: this.state.firstName,
+      lastname: this.state.lastName,
       profilepic: this.state.imageUrl
     }).then(result => {
       console.log(result.data)
@@ -106,8 +106,8 @@ export default class CreateAccount extends Component {
                   By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.
                 </span>
               </Row>
-              <Row>
-                <Button onClick={this.handleSignUp} type="primary">Sign Up</Button>
+              <Row type="flex" align="middle">
+                <Button onClick={this.handleSignUp} type="primary" className="signUpButton">Sign Up</Button>
               </Row>
               <Row>
                 <span>Create a Page for a celebrity, band or business.</span>
