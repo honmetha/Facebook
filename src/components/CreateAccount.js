@@ -36,7 +36,7 @@ export default class CreateAccount extends Component {
         <Col span={3}></Col>
         <Col span={18}>
           <Row>
-            <Col span={14}>
+            <Col span={14} className="fbLoginTextPic">
               <Row className="fbLoginText">
                 <span>
                   Facebook helps you connect and share with the people in your life.
@@ -44,7 +44,7 @@ export default class CreateAccount extends Component {
               </Row>
               <img src="fbLoginPic.png" alt="" width="100%" />
             </Col>
-            <Col span={10}>
+            <Col span={10} className="fbCreateAccount">
               <Row className="createAccountHeader">
                 <span>Create an account</span>
               </Row>
@@ -101,7 +101,7 @@ export default class CreateAccount extends Component {
                   <Radio value={3} className="createAccountGenderRadio">Custom</Radio>
                 </Radio.Group>
               </Row>
-              <Row>
+              <Row className="termsPolicyText">
                 <span>
                   By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.
                 </span>
@@ -109,8 +109,10 @@ export default class CreateAccount extends Component {
               <Row type="flex" align="middle">
                 <Button onClick={this.handleSignUp} type="primary" className="signUpButton">Sign Up</Button>
               </Row>
-              <Row>
-                <span>Create a Page for a celebrity, band or business.</span>
+              <Row className="celebrityPage">
+                <span>
+                  <a href="http://localhost:3000/" className="createAPage">Create a Page</a> for a celebrity, band or business.
+                </span>
               </Row>
             </Col>
           </Row>

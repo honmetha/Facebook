@@ -13,7 +13,7 @@ export default class LoginMenuBar extends Component {
           <Row className="loginMenuBar">
             <Col span={12}>
               <Row className="fbTextLogo">
-                <Link to="/"><img src="facebookTextLogo.png" alt="" width="180" /></Link>
+                <Link to="/"><img src="facebookTextLogo.png" alt="" width="180" className="fbTextLogoImage" /></Link>
               </Row>
             </Col>
             <Col span={12}>
