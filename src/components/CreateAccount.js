@@ -33,13 +33,13 @@ export default class CreateAccount extends Component {
         profilepic: this.state.imageUrl
       }).then(result => {
         console.log(result.data)
-        // this.setState({
-        //   firstName: "",
-        //   lastName: "",
-        //   userName: "",
-        //   password: "",
-        //   imageUrl: ""
-        // })
+        this.setState({
+          firstName: "",
+          lastName: "",
+          userName: "",
+          password: "",
+          imageUrl: ""
+        })
       }).catch(err => {
         console.error(err)
       })
@@ -73,6 +73,7 @@ export default class CreateAccount extends Component {
                     this.setState({ firstName: e.target.value })
                   }
                     placeholder="First Name"
+                    value={this.state.firstName}
                     className="createAccountInput" />
                 </Col>
                 <Col span="12">
@@ -80,6 +81,7 @@ export default class CreateAccount extends Component {
                     this.setState({ lastName: e.target.value })
                   }
                     placeholder="Surname"
+                    value={this.state.lastName}
                     className="createAccountInput" />
                 </Col>
               </Row>
@@ -88,6 +90,7 @@ export default class CreateAccount extends Component {
                   this.setState({ imageUrl: e.target.value })
                 }
                   placeholder="Image Url"
+                  value={this.state.imageUrl}
                   className="createAccountInput" />
               </Row>
               <Row>
@@ -95,6 +98,7 @@ export default class CreateAccount extends Component {
                   this.setState({ userName: e.target.value })
                 }
                   placeholder="Mobile number or email address"
+                  value={this.state.userName}
                   className="createAccountInput" />
               </Row>
               <Row>
@@ -102,6 +106,7 @@ export default class CreateAccount extends Component {
                   this.setState({ password: e.target.value })
                 }
                   placeholder="New password"
+                  value={this.state.password}
                   className="createAccountInput" />
               </Row>
               <Row className="createAccountBirthdayGender">

@@ -21,8 +21,10 @@ export default class MyHeader extends Component {
         <Col span={12}>
           <Row type="flex" justify="center">
             <Button type="link" ghost className="profilePicButton">
-              <img src="honmetha.jpg" alt="" width="30px" className="navProfilePic" />
-              <strong className="navProfileText">Hon</strong>
+              <Link to="/profile">
+                <img src="honmetha.jpg" alt="" width="30px" className="navProfilePic" />
+                <strong>Hon</strong>
+              </Link>
             </Button>
             <Button type="link" ghost className="navTextButton">
               <Link to="/feed">
