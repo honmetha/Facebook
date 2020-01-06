@@ -16,18 +16,34 @@ export default class CreateAccount extends Component {
   }
 
   handleSignUp = (e) => {
-    Axios.post("http://localhost:8080/createUser", {
-      username: this.state.userName,
-      password: this.state.password,
-      firstname: this.state.firstName,
-      lastname: this.state.lastName,
-      profilepic: this.state.imageUrl
-    }).then(result => {
-      console.log(result.data)
-    })
-      .catch(err => {
+    let firstN = this.state.firstName
+    let lastN = this.state.lastName
+    let userN = this.state.userName
+    let passW = this.state.password
+    let imageU = this.state.imageUrl
+
+    if (firstN === "" || lastN === "" || userN === "" || passW === "" || imageU === "") {
+
+    } else {
+      Axios.post("http://localhost:8080/createUser", {
+        username: this.state.userName,
+        password: this.state.password,
+        firstname: this.state.firstName,
+        lastname: this.state.lastName,
+        profilepic: this.state.imageUrl
+      }).then(result => {
+        console.log(result.data)
+        // this.setState({
+        //   firstName: "",
+        //   lastName: "",
+        //   userName: "",
+        //   password: "",
+        //   imageUrl: ""
+        // })
+      }).catch(err => {
         console.error(err)
       })
+    }
   }
 
   render() {

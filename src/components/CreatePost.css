@@ -54,3 +54,38 @@
   font-weight: 550;
   padding-left: 10px;
 }
+
+.feedOrStory {
+  background-color: #F5F6F7;
+  padding: 5px 3px 5px 5px;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.postButtonRow {
+  background-color: #F5F6F7;
+  padding: 0 12px 10px;
+}
+
+.postButton {
+  font-size: 14px;
+  font-weight: bold;
+  box-sizing: border-box;
+  height: 32px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 2px;
+  background-color: #4267b2;
+  border-color: #4267b2;
+}
+
+.postButton:hover {
+  background-color: #36599A;
+  border-color: #36599A;
+}
+
+.postButton:focus {
+  background-color: #36599A;
+  border-color: #36599A;
+}

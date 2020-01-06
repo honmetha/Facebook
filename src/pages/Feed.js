@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import MyHeader from '../components/MyHeader'
 import Leftnavbar from '../components/Leftnavbar'
 import CreatePost from '../components/CreatePost'
-import CreatePost2 from '../components/CreatePost2'
 import Post from '../components/Post'
 import FriendSuggestions from '../components/FriendSuggestions'
 import FriendRequests from '../components/FriendRequests'
@@ -56,7 +55,6 @@ export default class Feed extends Component {
               </Row>
             </Col>
             <Col span={9}>
-              <CreatePost2 />
               <CreatePost onAddPost={this.handleAddPost}
                 onChangePostText={this.handleChangePostText}
                 onChangeImgUrl={this.handleChangeImgUrl}

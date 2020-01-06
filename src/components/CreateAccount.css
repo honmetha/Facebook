@@ -45,6 +45,11 @@
   color: #999999;
 }
 
+.reateAccountInput:hover {
+  border-color: #bdc7d8;
+  outline: none;
+}
+
 .createAccountBirthdayGender {
   color: #90949c;
   font-size: 16.5px;
@@ -85,9 +90,9 @@
   background: linear-gradient(#79bc64, #578843);
 }
 
-.signUpButtonk:focus {
-  border-color: #3b6e22 #3b6e22 #2c5115 !important;
-  background: linear-gradient(#79bc64, #578843) !important;
+.signUpButton:focus {
+  border-color: #3b6e22 #3b6e22 #2c5115;
+  background: linear-gradient(#79bc64, #578843);
 }
 
 .celebrityPage {

@@ -12,14 +12,14 @@ class CreatePost extends Component {
           <span>Create Post</span>
         </Row>
         <Divider className="createPostDivider" />
-        <Row className="whatsOnYourMind">
-          <Col>
-            <Row className="whatsOnYourMindInput">
-              <Col span={3}>
-                <img src="honmetha.jpg" alt="" width="45px" className="whatsOnYourMindPic" />
-              </Col>
-              <Col span={21}>
-                <Form onSubmit={this.props.onAddPost}>
+        <Form onSubmit={this.props.onAddPost}>
+          <Row className="whatsOnYourMind">
+            <Col>
+              <Row className="whatsOnYourMindInput">
+                <Col span={3}>
+                  <img src="honmetha.jpg" alt="" width="45px" className="whatsOnYourMindPic" />
+                </Col>
+                <Col span={21}>
                   <Form.Item>
                     <Input placeholder="What's on your mind, Hon?"
                       className="whatsOnYourMindInputText"
@@ -32,32 +32,63 @@ class CreatePost extends Component {
                       onChange={(e) => onChangeImgUrl(e)}
                     />
                   </Form.Item>
-                  <Form.Item>
-                    <Button type="primary" htmlType="submit">
-                      Submit
-                    </Button>
-                  </Form.Item>
-                </Form>
-              </Col>
-            </Row>
-            <Divider className="whatsOnYourMindDivider" />
-            <Row className="whatsOnYourMindButtons">
-              <Button className="createPostButtons">
-                <img src="createPostPhoto.png" alt="" width="25" />
-                Photo/Video
-              </Button>
-              <Button className="createPostButtons">
-                <img src="createPostTag.png" alt="" width="25" />
-                Tag Friends
-              </Button>
-              <Button className="createPostButtons">
-                <img src="createPostFeeling.png" alt="" width="25" />
-                Feeling/Activity
-              </Button>
-              <Button className="createPostButtons">...</Button>
-            </Row>
-          </Col>
-        </Row>
+                </Col>
+              </Row>
+              <Divider className="whatsOnYourMindDivider" />
+              <Row className="whatsOnYourMindButtons">
+                <Button className="createPostButtons">
+                  <img src="createPostPhoto.png" alt="" width="25" />
+                  Photo/Video
+                </Button>
+                <Button className="createPostButtons">
+                  <img src="createPostTag.png" alt="" width="25" />
+                  Tag Friends
+                </Button>
+                <Button className="createPostButtons">
+                  <img src="createPostFeeling.png" alt="" width="25" />
+                  Feeling/Activity
+                </Button>
+                <Button className="createPostButtons">
+                  <img src="newsFeedEllipse.png" alt="" width="18" />
+                </Button>
+              </Row>
+            </Col>
+          </Row>
+          <Divider className="whatsOnYourMindDivider" />
+          <Row className="feedOrStory">
+            <Col>
+              <Row>
+                <Col span={19}>
+                  <input type="radio" name="" value="feed" />
+                  News Feed
+                </Col>
+                <Col span={5}>
+                  <button>
+                    <img src="Friends.png" alt="" width="17" />
+                    <span>Friends</span>
+                  </button>
+                </Col>
+              </Row>
+              <Row>
+                <Col span={19}>
+                  <input type="radio" name="" value="story" />
+                  Your Story
+                </Col>
+                <Col span={5}>
+                  <button>
+                    <img src="Friends.png" alt="" width="17" />
+                    <span>Friends</span>
+                  </button>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+          <Row className="postButtonRow">
+            <Button type="primary" htmlType="submit" className="postButton">
+              Post
+            </Button>
+          </Row>
+        </Form>
       </Card>
     )
   }
