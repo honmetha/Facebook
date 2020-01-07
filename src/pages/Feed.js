@@ -25,18 +25,8 @@ export default class Feed extends Component {
     ]
   }
 
-  handleChangePostText = (e) => {
-    this.setState({ postText: e.target.value })
-  }
-
-  handleChangeImgUrl = (e) => {
-    this.setState({ imgUrl: e.target.value })
-  }
-
-  handleAddPost = (e) => {
-    e.preventDefault();
-    const { postText, imgUrl, posts } = this.state
-    this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...posts] })
+  handleSubmit = (postText, imgUrl) => {
+    this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...this.state.posts] })
   }
 
   render() {
@@ -55,15 +45,8 @@ export default class Feed extends Component {
               </Row>
             </Col>
             <Col span={9}>
-              <CreatePost onAddPost={this.handleAddPost}
-                onChangePostText={this.handleChangePostText}
-                onChangeImgUrl={this.handleChangeImgUrl}
-              />
-              {
-                this.state.posts.map(post => (
-                  <Post postText={post.text} imgUrl={post.imgUrl} />
-                ))
-              }
+              <CreatePost onSubmit={this.handleSubmit}/>
+              <Post posts={this.state.posts} />
             </Col>
             <Col span={8}>
               <Row type="flex" justify="start">

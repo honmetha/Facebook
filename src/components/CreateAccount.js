@@ -40,6 +40,7 @@ export default class CreateAccount extends Component {
           password: "",
           imageUrl: ""
         })
+        this.props.history.push('/feed');
       }).catch(err => {
         console.error(err)
       })

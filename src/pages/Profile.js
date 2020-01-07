@@ -9,6 +9,21 @@ import { Row, Col } from 'antd'
 import './Pages.css'
 
 export default class Profile extends Component {
+  state = {
+    postText: '',
+    imgUrl: '',
+    posts: [
+      {
+        text: `Don't be jealous at me. This is not my car.`,
+        imgUrl: 'https://images.unsplash.com/photo-1542128962-9d50ad7bf014?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+      },
+      {
+        text: `Look at my desk`,
+        imgUrl: 'https://images.unsplash.com/photo-1489257712451-3a66755ca19c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+      }
+    ]
+  }
+
   render() {
     return (
       <div>
@@ -30,8 +45,7 @@ export default class Profile extends Component {
               <Col span={15}>
                 <Row type="flex" justify="start">
                   <CreatePost />
-                  <Post />
-                  <Post />
+                  <Post posts={this.state.posts} />
                 </Row>
               </Col>
             </Row>

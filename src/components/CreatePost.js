@@ -4,15 +4,29 @@ import { Card, Row, Col, Button, Divider, Input, Form } from 'antd'
 
 class CreatePost extends Component {
   
+  handleChangePostText = (e) => {
+    this.setState({ postText: e.target.value })
+  }
+
+  handleChangeImgUrl = (e) => {
+    this.setState({ imgUrl: e.target.value })
+  }
+
+  handleAddPost = (e) => {
+    e.preventDefault();
+    const { postText, imgUrl } = this.state
+    this.props.onSubmit(postText, imgUrl)
+    // this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...posts] })
+  }
+
   render() {
-    let { onChangePostText, onChangeImgUrl } = this.props
     return (
       <Card className="CreatePostCard">
         <Row className="createPostTitle">
           <span>Create Post</span>
         </Row>
         <Divider className="createPostDivider" />
-        <Form onSubmit={this.props.onAddPost}>
+        <Form onSubmit={this.handleAddPost}>
           <Row className="whatsOnYourMind">
             <Col>
               <Row className="whatsOnYourMindInput">
@@ -23,13 +37,13 @@ class CreatePost extends Component {
                   <Form.Item>
                     <Input placeholder="What's on your mind, Hon?"
                       className="whatsOnYourMindInputText"
-                      onChange={onChangePostText}
+                      onChange={this.handleChangePostText}
                     />
                   </Form.Item>
                   <Form.Item>
                     <Input placeholder="Image URL what you want"
                       className="ImageUrlWhatYouWant"
-                      onChange={(e) => onChangeImgUrl(e)}
+                      onChange={(e) => this.handleChangeImgUrl(e)}
                     />
                   </Form.Item>
                 </Col>
