@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import './CreateAccount.css'
 import { Row, Col, Input, Button, Radio } from 'antd'
 import Axios from 'axios'
+import { withRouter} from 'react-router-dom'
 
-export default class CreateAccount extends Component {
+class CreateAccount extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +41,7 @@ export default class CreateAccount extends Component {
           password: "",
           imageUrl: ""
         })
-        this.props.history.push('/feed');
+        this.props.history.push('/feed')
       }).catch(err => {
         console.error(err)
       })
@@ -69,7 +70,7 @@ export default class CreateAccount extends Component {
                 <span>It's quick and easy.</span>
               </Row>
               <Row>
-                <Col span="12">
+                <Col span="12" className="firstNameInput">
                   <Input onChange={e =>
                     this.setState({ firstName: e.target.value })
                   }
@@ -144,3 +145,5 @@ export default class CreateAccount extends Component {
     )
   }
 }
+
+export default withRouter(CreateAccount)

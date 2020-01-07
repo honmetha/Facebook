@@ -38,6 +38,11 @@
   border: none;
 }
 
+.whatsOnYourMindInputText:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .whatsOnYourMindDivider {
   margin: 0px;
 }
@@ -61,6 +66,22 @@
   color: black;
   font-size: 14px;
   font-weight: 600;
+}
+
+.feedStoryRadio {
+  margin-left: 5%;
+}
+
+.friendButtons {
+  border: 1px solid;
+  border-radius: 2px;
+  box-sizing: content-box;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f6f7;
+  border-color: #ccd0d5;
+  color: #4b4f56;
+  margin-right: 13%;
 }
 
 .postButtonRow {

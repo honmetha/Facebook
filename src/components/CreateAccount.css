@@ -33,6 +33,10 @@
   padding-bottom: 20px;
 }
 
+.firstNameInput {
+  padding-right: 2%;
+}
+
 .createAccountInput {
   height: 40px;
   border-radius: 5px;
@@ -54,6 +58,7 @@
   color: #90949c;
   font-size: 16.5px;
   font-weight: bold;
+  margin: 5px 0px 5px;
 }
 
 .createAccountGenderRadio {

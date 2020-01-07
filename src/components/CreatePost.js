@@ -42,7 +42,7 @@ class CreatePost extends Component {
                   </Form.Item>
                   <Form.Item>
                     <Input placeholder="Image URL what you want"
-                      className="ImageUrlWhatYouWant"
+                      className="whatsOnYourMindInputText"
                       onChange={(e) => this.handleChangeImgUrl(e)}
                     />
                   </Form.Item>
@@ -73,26 +73,30 @@ class CreatePost extends Component {
             <Col>
               <Row>
                 <Col span={19}>
-                  <input type="radio" name="" value="feed" />
+                  <input type="radio" name="" value="feed" className="feedStoryRadio" />
                   News Feed
                 </Col>
                 <Col span={5}>
-                  <button>
-                    <img src="Friends.png" alt="" width="17" />
-                    <span>Friends</span>
-                  </button>
+                  <Row type="flex" align="end">
+                    <button className="friendButtons">
+                      <img src="Friends.png" alt="" width="17" />
+                      <span> Friends</span>
+                    </button>
+                  </Row>
                 </Col>
               </Row>
               <Row>
                 <Col span={19}>
-                  <input type="radio" name="" value="story" />
+                  <input type="radio" name="" value="story" className="feedStoryRadio" />
                   Your Story
                 </Col>
                 <Col span={5}>
-                  <button>
-                    <img src="Friends.png" alt="" width="17" />
-                    <span>Friends</span>
-                  </button>
+                  <Row type="flex" align="end">
+                    <button className="friendButtons">
+                      <img src="Friends.png" alt="" width="17" />
+                      <span> Friends</span>
+                    </button>
+                  </Row>
                 </Col>
               </Row>
             </Col>
