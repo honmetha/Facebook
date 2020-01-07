@@ -25,9 +25,27 @@
 
 .confirmDeleteButtons {
   margin: 2% 2% 0 0;
-  background-color: #F5F6F7;
+  border: 1px solid;
+  border-radius: 2px;
+  box-sizing: content-box;
+  box-shadow: none;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  background-color: #f5f6f7;
+  border-color: #ccd0d5;
+  color: #4b4f56;
+  height: 24px;
 }
 
 .confirmDeleteButtons:hover {
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
+  border-color: #ccd0d5;
+  color: #4b4f56;
+}
+
+.confirmDeleteButtons:focus {
+  background-color: #f5f6f7;
+  border-color: #ccd0d5;
+  color: #4b4f56;
 }
