@@ -35,14 +35,14 @@ export default class Profile extends Component {
             <Row>
               <ProfileMenu />
             </Row>
-            <Row>
-              <Col span={9}>
+            <Row gutter={10}>
+              <Col span={10}>
                 <Row type="flex" justify="end">
                   <LanguageCard />
                   <PrivacyTerms />
                 </Row>
               </Col>
-              <Col span={15}>
+              <Col span={14}>
                 <Row type="flex" justify="start">
                   <CreatePost />
                   <Post posts={this.state.posts} />

@@ -8,6 +8,7 @@ import FriendRequests from '../components/FriendRequests'
 import LanguageCard from '../components/LanguageCard'
 import PrivacyTerms from '../components/PrivacyTerms'
 import { Row, Col } from 'antd'
+import './Pages.css'
 
 export default class Feed extends Component {
   state = {
@@ -36,7 +37,7 @@ export default class Feed extends Component {
           <MyHeader />
         </Col>
         <Col>
-          <Row>
+          <Row gutter={10} className="marginZero">
             <Col span={7}>
               <Row type="flex" justify="end">
                 <Col>
@@ -48,7 +49,7 @@ export default class Feed extends Component {
               <CreatePost onSubmit={this.handleSubmit}/>
               <Post posts={this.state.posts} />
             </Col>
-            <Col span={8}>
+            <Col span={5}>
               <Row type="flex" justify="start">
                 <Col>
                   <FriendRequests />

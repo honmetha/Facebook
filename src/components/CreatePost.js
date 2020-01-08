@@ -3,7 +3,7 @@ import './CreatePost.css'
 import { Card, Row, Col, Button, Divider, Input, Form } from 'antd'
 
 class CreatePost extends Component {
-  
+
   handleChangePostText = (e) => {
     this.setState({ postText: e.target.value })
   }
@@ -72,12 +72,13 @@ class CreatePost extends Component {
           <Row className="feedOrStory">
             <Col>
               <Row>
-                <Col span={19}>
+                <Col span={19} className="feedOrStoryMain">
                   <input type="radio" name="" value="feed" className="feedStoryRadio" />
+                  <img src="createPostNewsFeed.png" alt="" width="39" className="feedStoryIcon" />
                   News Feed
                 </Col>
                 <Col span={5}>
-                  <Row type="flex" align="end">
+                  <Row type="flex" justify="end">
                     <button className="friendButtons">
                       <img src="Friends.png" alt="" width="17" />
                       <span> Friends</span>
@@ -86,12 +87,13 @@ class CreatePost extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col span={19}>
+                <Col span={19} className="feedOrStoryMain">
                   <input type="radio" name="" value="story" className="feedStoryRadio" />
+                  <img src="honMetha.jpg" alt="" width="39" className="feedStoryIcon" />
                   Your Story
                 </Col>
                 <Col span={5}>
-                  <Row type="flex" align="end">
+                  <Row type="flex" justify="end">
                     <button className="friendButtons">
                       <img src="Friends.png" alt="" width="17" />
                       <span> Friends</span>

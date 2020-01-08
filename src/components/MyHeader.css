@@ -1,6 +1,6 @@
 .fbNavBar {
   background-color: #4267B2;
-  margin-bottom: 0.8%;
+  margin-bottom: 10px;
 }
 
 .fbLogo {
@@ -34,5 +34,10 @@
 
 .navIconButton {
   padding: 0% 1% 0% 0%;
+  margin: 1% 0% 1.5% 0%;
+}
+
+.navIconDropdown {
+  padding: 0.7% 1% 0% 0%;
   margin: 1% 0% 1.5% 0%;
 }
