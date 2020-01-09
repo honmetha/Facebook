@@ -1,8 +1,32 @@
 import React, { Component } from 'react'
 import './CreatePost.css'
-import { Card, Row, Col, Button, Divider, Input, Form } from 'antd'
+import { Card, Row, Col, Button, Divider, Input, Form, Modal } from 'antd'
 
 class CreatePost extends Component {
+  state = { 
+    visible: false,
+    displayFeedStory: "none" 
+  };
+
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  };
+
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  };
 
   handleChangePostText = (e) => {
     this.setState({ postText: e.target.value })
@@ -17,6 +41,10 @@ class CreatePost extends Component {
     const { postText, imgUrl } = this.state
     this.props.onSubmit(postText, imgUrl)
     // this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...posts] })
+  }
+
+  handleClick = (e) => {
+    this.setState({ displayFeedStory: "" })
   }
 
   render() {
@@ -38,22 +66,30 @@ class CreatePost extends Component {
                     <Input placeholder="What's on your mind, Hon?"
                       className="whatsOnYourMindInputText"
                       onChange={this.handleChangePostText}
-                    />
-                  </Form.Item>
-                  <Form.Item>
-                    <Input placeholder="Image URL what you want"
-                      className="whatsOnYourMindInputText"
-                      onChange={(e) => this.handleChangeImgUrl(e)}
+                      onClick={this.handleClick}
                     />
                   </Form.Item>
                 </Col>
               </Row>
               <Divider className="whatsOnYourMindDivider" />
               <Row className="whatsOnYourMindButtons">
-                <Button className="createPostButtons">
+                <Button onClick={this.showModal} className="createPostButtons">
                   <img src="createPostPhoto.png" alt="" width="25" />
                   Photo/Video
                 </Button>
+                <Modal
+                  title="Photo/Video"
+                  visible={this.state.visible}
+                  onOk={this.handleOk}
+                  onCancel={this.handleCancel}
+                >
+                  <p><Form.Item>
+                    <Input placeholder="Please insert image URL"
+                      className="whatsOnYourMindInputText"
+                      onChange={(e) => this.handleChangeImgUrl(e)}
+                    />
+                  </Form.Item></p>
+                </Modal>
                 <Button className="createPostButtons">
                   <img src="createPostTag.png" alt="" width="25" />
                   Tag Friends
@@ -68,8 +104,8 @@ class CreatePost extends Component {
               </Row>
             </Col>
           </Row>
-          <Divider className="whatsOnYourMindDivider" />
-          <Row className="feedOrStory">
+          <Divider className="whatsOnYourMindDivider" style={{ display: this.state.displayFeedStory }}/>
+          <Row className="feedOrStory" style={{ display: this.state.displayFeedStory }}>
             <Col>
               <Row>
                 <Col span={19} className="feedOrStoryMain">
@@ -103,7 +139,7 @@ class CreatePost extends Component {
               </Row>
             </Col>
           </Row>
-          <Row className="postButtonRow">
+          <Row className="postButtonRow" style={{ display: this.state.displayFeedStory }}>
             <Button type="primary" htmlType="submit" className="postButton">
               Post
             </Button>
