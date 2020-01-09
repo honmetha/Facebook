@@ -9,6 +9,7 @@ import LanguageCard from '../components/LanguageCard'
 import PrivacyTerms from '../components/PrivacyTerms'
 import { Row, Col } from 'antd'
 import './Pages.css'
+import Axios from 'axios'
 
 export default class Feed extends Component {
   state = {
@@ -16,18 +17,32 @@ export default class Feed extends Component {
     imgUrl: '',
     posts: [
       {
-        text: `Don't be jealous at me. This is not my car.`,
-        imgUrl: 'https://images.unsplash.com/photo-1542128962-9d50ad7bf014?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+        text: `Don't be jealous at me. This is not my bike.`,
+        imgUrl: 'https://images.unsplash.com/photo-1558980394-0a06c4631733?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       },
       {
-        text: `Look at my desk`,
-        imgUrl: 'https://images.unsplash.com/photo-1489257712451-3a66755ca19c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+        text: `Someone else's house lol`,
+        imgUrl: 'https://images.unsplash.com/photo-1491489226161-1d38cb39ec64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       }
     ]
   }
 
   handleSubmit = (postText, imgUrl) => {
     this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...this.state.posts] })
+  }
+
+  fetchData = () =>{
+    Axios.get('http://localhost:8080/getAllPost')
+    .then(result=>{
+      console.log(result)
+      this.setState({
+        posts: result.data
+      })
+    })
+  }
+
+  componentWillMount(){
+    this.fetchData()
   }
 
   render() {
@@ -46,7 +61,7 @@ export default class Feed extends Component {
               </Row>
             </Col>
             <Col span={9}>
-              <CreatePost onSubmit={this.handleSubmit}/>
+              <CreatePost fetchData={this.fetchData} onSubmit={this.handleSubmit}/>
               <Post posts={this.state.posts} />
             </Col>
             <Col span={5}>

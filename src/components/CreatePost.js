@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './CreatePost.css'
-import { Card, Row, Col, Button, Divider, Input, Form, Modal } from 'antd'
+import { Card, Row, Col, Button, Divider, Input, Form, Upload } from 'antd'
+import Axios from 'axios'
 
 class CreatePost extends Component {
-  state = { 
+  state = {
     visible: false,
-    displayFeedStory: "none" 
+    displayFeedStory: "none"
   };
 
   showModal = () => {
@@ -36,10 +37,41 @@ class CreatePost extends Component {
     this.setState({ imgUrl: e.target.value })
   }
 
+  handleBeforeUpload = file => {
+    this.setState(state => ({
+      fileList: [file],
+    }));
+    return false;
+  }
+
+  handleRemoveUpload = () => {
+    this.setState(state => ({
+      fileList: []
+    }))
+  }
+
   handleAddPost = (e) => {
     e.preventDefault();
-    const { postText, imgUrl } = this.state
-    this.props.onSubmit(postText, imgUrl)
+    console.log(this.state.fileList)
+    let data = new FormData()
+    if (this.state.fileList) {
+      data.append('postImage', this.state.fileList[0])
+    }
+    data.append('message', this.state.postText)
+    Axios.post('http://localhost:8080/createPost', data)
+      .then(result => {
+        console.log(result)
+        this.handleRemoveUpload()
+        this.setState({
+          postText: ''
+        })
+        this.props.fetchData()
+      })
+      .catch(err => {
+        console.error(err);
+      })
+    // const { postText, imgUrl } = this.state
+    // this.props.onSubmit(postText, imgUrl)
     // this.setState({ posts: [{ text: postText, imgUrl: imgUrl }, ...posts] })
   }
 
@@ -67,29 +99,23 @@ class CreatePost extends Component {
                       className="whatsOnYourMindInputText"
                       onChange={this.handleChangePostText}
                       onClick={this.handleClick}
+                      value={this.state.postText}
                     />
                   </Form.Item>
                 </Col>
               </Row>
               <Divider className="whatsOnYourMindDivider" />
               <Row className="whatsOnYourMindButtons">
-                <Button onClick={this.showModal} className="createPostButtons">
-                  <img src="createPostPhoto.png" alt="" width="25" />
-                  Photo/Video
-                </Button>
-                <Modal
-                  title="Photo/Video"
-                  visible={this.state.visible}
-                  onOk={this.handleOk}
-                  onCancel={this.handleCancel}
+                <Upload
+                  onRemove={this.handleRemoveUpload}
+                  beforeUpload={this.handleBeforeUpload}
+                  fileList={this.state.fileList}
                 >
-                  <p><Form.Item>
-                    <Input placeholder="Please insert image URL"
-                      className="whatsOnYourMindInputText"
-                      onChange={(e) => this.handleChangeImgUrl(e)}
-                    />
-                  </Form.Item></p>
-                </Modal>
+                  <Button className="createPostButtons">
+                    <img src="createPostPhoto.png" alt="" width="25" />
+                    Photo/Video
+                  </Button>
+                </Upload>
                 <Button className="createPostButtons">
                   <img src="createPostTag.png" alt="" width="25" />
                   Tag Friends
@@ -98,13 +124,13 @@ class CreatePost extends Component {
                   <img src="createPostFeeling.png" alt="" width="25" />
                   Feeling/Activity
                 </Button>
-                <Button className="createPostButtons">
+                <Button className="createPostButtons CPEllipseButton">
                   <img src="newsFeedEllipse.png" alt="" width="18" />
                 </Button>
               </Row>
             </Col>
           </Row>
-          <Divider className="whatsOnYourMindDivider" style={{ display: this.state.displayFeedStory }}/>
+          <Divider className="whatsOnYourMindDivider" style={{ display: this.state.displayFeedStory }} />
           <Row className="feedOrStory" style={{ display: this.state.displayFeedStory }}>
             <Col>
               <Row>

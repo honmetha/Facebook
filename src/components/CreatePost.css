@@ -46,16 +46,22 @@
 }
 
 .whatsOnYourMindButtons {
-  padding: 1.5% 0% 1.5% 0%;
+  padding: 1.5% 0% 1.9% 0%;
+  display: flex;
 }
 
 .createPostButtons {
   border: none;
   background-color: #f5f6f7;
   border-radius: 15px;
-  margin-right: 1.5%;
+  margin-right: 7px;
   font-weight: 550;
   padding-left: 10px;
+  box-shadow: none;
+}
+
+.CPEllipseButton {
+  padding-right: 10px
 }
 
 .feedOrStory {
