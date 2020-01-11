@@ -4,23 +4,23 @@ import { Row, Col, Input, Button, Menu, Dropdown } from 'antd'
 import { Link } from 'react-router-dom'
 
 const { Search } = Input;
-const menu = (
-  <Menu>
-    <Menu.Item key="0">
-      <a href="http://localhost:3000/feed">Activity Log</a>
-    </Menu.Item>
-    <Menu.Item key="1">
-      <a href="http://localhost:3000/feed">Settings</a>
-    </Menu.Item>
-    <Menu.Divider />
-    <Menu.Item key="3">
-      <a href="http://localhost:3000">Log Out</a>
-    </Menu.Item>
-  </Menu>
-);
 
 export default class MyHeader extends Component {
   render() {
+    const menu = (
+      <Menu>
+        <Menu.Item key="0">
+          <a href="http://localhost:3000/feed">Activity Log</a>
+        </Menu.Item>
+        <Menu.Item key="1">
+          <a href="http://localhost:3000/feed">Settings</a>
+        </Menu.Item>
+        <Menu.Divider />
+        <Menu.Item key="3">
+          <Link onClick={() => this.props.handleLogout()} >Log Out</Link>
+        </Menu.Item>
+      </Menu>
+    );
     return (
       <Row className="fbNavBar">
         <Col span={12}>
@@ -35,13 +35,13 @@ export default class MyHeader extends Component {
           <Row type="flex" justify="center">
             <Button type="link" ghost className="profilePicButton">
               <Link to="/profile">
-                <img src="honmetha.jpg" alt="" width="30px" className="navProfilePic" />
-                <strong>Hon</strong>
+                <img src={this.props.user.profilepic} alt="" width="30px" className="navProfilePic" />
+                <strong>{this.props.user.firstname}</strong>
               </Link>
             </Button>
             <Button type="link" ghost className="navTextButton">
               <Link to="/feed">
-              <strong>Home</strong>
+                <strong>Home</strong>
               </Link>
             </Button>
             <Button type="link" ghost className="navTextButton textIconButtonMargin">

@@ -58,7 +58,7 @@ class CreatePost extends Component {
       data.append('postImage', this.state.fileList[0])
     }
     data.append('message', this.state.postText)
-    Axios.post('http://localhost:8080/createPost', data)
+    Axios.post('/createPost', data)
       .then(result => {
         console.log(result)
         this.handleRemoveUpload()
@@ -91,7 +91,7 @@ class CreatePost extends Component {
             <Col>
               <Row className="whatsOnYourMindInput">
                 <Col span={3}>
-                  <img src="honmetha.jpg" alt="" width="45px" className="whatsOnYourMindPic" />
+                  <img src={this.props.user.profilepic} alt="" width="45px" className="whatsOnYourMindPic" />
                 </Col>
                 <Col span={21}>
                   <Form.Item>

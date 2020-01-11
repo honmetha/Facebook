@@ -10,10 +10,10 @@ export default class Leftnavbar extends Component {
         <Row className="leftSideProfile padding1p5">
           <Link to="/profile">
             <Col span={4}>
-              <img src="honmetha.jpg" alt="" width="25px" className="ProfilePic marginTop-10" />
+              <img src={this.props.user.profilepic} alt="" width="25px" className="ProfilePic marginTop-10" />
             </Col>
             <Col span={14}>
-              <span className="blackColor">Hon Metha</span>
+              <span className="blackColor">{`${this.props.user.firstname} ${this.props.user.lastname}`}</span>
             </Col>
           </Link>
           <Col span={6}>

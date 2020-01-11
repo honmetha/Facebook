@@ -11,11 +11,11 @@ export default class Post extends Component {
           <Card className="ant-card-body postCard">
             <Row className="cardHeader">
               <Col span={2}>
-                <img src="honmetha.jpg" alt="" width="40px" className="postProfilePic" />
+                <img src={this.props.user.profilepic} alt="" width="40px" className="postProfilePic" />
               </Col>
               <Col span={20} className="profileText">
                 <Row className="profileName">
-                  <strong>Hon Metha</strong>
+                  <strong>{`${this.props.user.firstname} ${this.props.user.lastname}`}</strong>
                 </Row>
                 <Row>
                   <span>Just now · </span>

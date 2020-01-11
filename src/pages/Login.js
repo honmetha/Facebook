@@ -6,7 +6,7 @@ export default class Login extends Component {
   render() {
     return (
       <div>
-        <LoginMenuBar />
+        <LoginMenuBar handleLogin = {this.props.handleLogin}/>
         <CreateAccount />
       </div>
     )

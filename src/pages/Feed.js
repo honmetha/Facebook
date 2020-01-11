@@ -9,21 +9,13 @@ import LanguageCard from '../components/LanguageCard'
 import PrivacyTerms from '../components/PrivacyTerms'
 import { Row, Col } from 'antd'
 import './Pages.css'
-import Axios from 'axios'
+import Axios from '../config/axios.setup'
 
 export default class Feed extends Component {
   state = {
     postText: '',
     imgUrl: '',
     posts: [
-      {
-        text: `Don't be jealous at me. This is not my bike.`,
-        imgUrl: 'https://images.unsplash.com/photo-1558980394-0a06c4631733?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-      },
-      {
-        text: `Someone else's house lol`,
-        imgUrl: 'https://images.unsplash.com/photo-1491489226161-1d38cb39ec64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-      }
     ]
   }
 
@@ -32,7 +24,7 @@ export default class Feed extends Component {
   }
 
   fetchData = () =>{
-    Axios.get('http://localhost:8080/getAllPost')
+    Axios.get('/getAllPost')
     .then(result=>{
       console.log(result)
       this.setState({
@@ -49,20 +41,20 @@ export default class Feed extends Component {
     return (
       <Row>
         <Col>
-          <MyHeader />
+          <MyHeader handleLogout={this.props.handleLogout} user={this.props.user} />
         </Col>
         <Col>
           <Row gutter={10} className="marginZero">
             <Col span={7}>
               <Row type="flex" justify="end">
                 <Col>
-                  <Leftnavbar />
+                  <Leftnavbar user={this.props.user} />
                 </Col>
               </Row>
             </Col>
             <Col span={9}>
-              <CreatePost fetchData={this.fetchData} onSubmit={this.handleSubmit}/>
-              <Post posts={this.state.posts} />
+              <CreatePost fetchData={this.fetchData} onSubmit={this.handleSubmit} user={this.props.user} />
+              <Post posts={this.state.posts} user={this.props.user} />
             </Col>
             <Col span={5}>
               <Row type="flex" justify="start">
